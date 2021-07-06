@@ -1,0 +1,61 @@
+def roi():
+        # Step one Income
+    income_rental = input('How much will this pay you? ')
+    income_laundry = input('how much will you charge for laundry? ')
+    income_storage = input('how much will you charge for storage? ')
+    full_income = (int(income_rental) + int(income_laundry) + int(income_storage))
+    print(f"Your monthly income is {full_income} a month.")
+        # Step two Expenses
+    expenses_tax = input('How much for tax?\n ex: 6.25% would be .0625 ')
+    expenses_insurance = input('what does the insurance cost you? ')
+        # Expenses_utilites
+    electric = input('electric cost ')
+    water = input('water cost ')
+    sewer = input('sewer cost ')
+    gas = input('gas cost ')
+    expenses_utilites = (int(gas) + int(water) + int(sewer) + int(gas) + int(electric))
+        # Expenses
+    expenses_HOA = input('How much is the home owner assosication? ')
+    expenses_yard = input('How much for lawn services? ')
+    expenses_vacancy = input('How much to cover vacancies? ')
+    expenses_repairs = input('How much are you putting away a week for repairs? ')
+    expenses_property_managment = input('how much for your property manager? ')
+    expenses_mortage = input('How much is your mortage? ')
+    total_expenses = int(expenses_utilites) + int(expenses_HOA) + int(expenses_yard) + int(
+        expenses_vacancy) + int(expenses_repairs) + int(expenses_property_managment) + int(
+            expenses_mortage) + int(expenses_insurance)
+    print(f"Your monthly expenses are: {total_expenses} a month.")
+        # Step three cash flow
+    income = full_income - total_expenses
+    print(f" Your income before tax {income}")
+    expenses = float(income) * float(expenses_tax)
+    final_expenses = int(income) - int(expenses)
+    print(f"Your monthly income: {final_expenses} a month with tax.")
+        # Step four cash on cash roi
+    down_payment = input('How much did you put down? ')
+    closing_cost = input('how much was closing costs? ')
+    rehab_budget = input('how much are you putting into fixing the place up? ')
+    total_investment = int(down_payment) + int(closing_cost) + int(rehab_budget)
+    print(f"your total investment has been {total_investment} ")
+    annual_cash_flow = 12 * int(final_expenses)
+    print(f" your annual cash flow is ${annual_cash_flow}")
+    cash_on_cash_roi = float(annual_cash_flow) / float(total_investment)
+    cash_on_cash_roi = float(cash_on_cash_roi) * float(100)
+    print(f'your ROI is {cash_on_cash_roi}%')
+roi()
+
+        self.rental = input('How much will this pay you? ')
+        self.laundry = input('how much will you charge for laundry? ')
+        self.storage = input('how much will you charge for storage? ')
+        self.tax = input('How much for tax?\n ex: 6.25% would be .0625 ')
+        self.insurance = input('what does the insurance cost you? ')
+        self.electric = input('electric cost ')
+        self.water = input('water cost ')
+        self.sewer = input('sewer cost ')
+        self.gas = input('gas cost ')
+        self.hoa = input('How much is the home owner assosication? ')
+        self.lawn = input('How much for lawn services? ')
+        self.vacancy = input('How much to cover vacancies? ')
+        self.repairs = input('How much are you putting away a week for repairs? ')
+        self.managment = input('how much for your property manager? ')
+        self.mortage = input('How much is your mortage? ')    
